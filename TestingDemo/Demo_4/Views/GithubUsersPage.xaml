@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}"
+    x:Class="TestingDemo.Demo_4.Views.GithubUsersPage">
+    <StackLayout>
+        <SearchBar Text="{Binding SearchText}"
+                   IsSpellCheckEnabled="False"
+                   Placeholder="Search User"
+                   SearchCommand="{Binding SearchUserCommand}"/>
+        <ListView ItemsSource="{Binding Users}"
+                  SelectedItem="{Binding SelectedUser}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding AvatarUrl}" Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

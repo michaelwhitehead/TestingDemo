@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TestingDemo.Demo_4.Views.GithubUserPage">
+    <Grid RowDefinitions="100, *"
+          RowSpacing="12"
+          Margin="24">
+        <Image Grid.Row="0"
+               WidthRequest="100"
+               HorizontalOptions="Center"
+               Source="{Binding User.AvatarUrl}">
+            <Image.Clip>
+                <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
+            </Image.Clip>
+        </Image>
+        <Label Grid.Row="1"
+               Text="{Binding User.Name}"
+               FontSize="Large"
+               HorizontalOptions="Center"/>
+    </Grid>
+</ContentPage>
